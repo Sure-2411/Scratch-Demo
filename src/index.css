@@ -1,0 +1,99 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+#Up-paw {
+    animation: move 2s infinite alternate
+  }
+  
+  #Tongue {
+    animation: slobber 2s infinite alternate
+  }
+  
+  #Tail {
+    animation: wag 2s infinite alternate
+  }
+  
+  @keyframes wag {
+  from { 
+    transform: 0
+    }
+  to { 
+    transform: translateX(14px)
+    } 
+  }
+  
+  @keyframes slobber {
+  from { 
+    transform: 0
+    }
+  to { 
+    transform: translateX(-6px)
+    } 
+  }
+    
+  @keyframes move {
+  from { 
+    transform: translateY(0)
+    }
+  to { 
+    transform: translateX(5px) translateY(-20px)
+    } 
+  }
+  .cartoon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%);
+    width: 20vmin;
+    height: 20vmin;
+  }
+  
+  
+  .cartoon div {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  .b {
+    border: 0.5vmin solid black;
+  }
+  
+  .r {
+    border-radius: 100%;
+  }
+  
+  .hb::before,
+  .ha::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+  
+  .bubble {
+    width: 50%;
+    height: 25%;
+    top: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2vmin;
+    background: #ffd;
+    box-shadow: 0 -0.25vmin, 0 0.125vmin;
+    font-family: "Comic Sans", "Comic Neue", sans-serif;
+  }
+  
+  .bubble::before {
+    width: 40%;
+    height: 100%;
+    bottom: -51%;
+    border-radius: 50%;
+    z-index: -1;
+    left: 10%;
+    box-shadow: 0.5vmin 0, 2vmin -0.5vmin #ffd, 2vmin -0.5vmin 0 0.5vmin;
+    /* clip-path: polygon(0% 49%, 150% 48%, 150% 100%, 0% 100%); */
+  }
